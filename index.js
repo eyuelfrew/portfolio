@@ -33,13 +33,13 @@ $(document).ready(function () {
   // chage nav bar color when scrooled
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0.1) {
-      $(".navbar").addClass("navbar-scrolled navbarb-nav");
+      $(".navbar").addClass("navbar-scrolled navbarb-nav ");
       var myDiv = $("#aboutME");
       var myDiv_2 = $("#aboutme");
       myDiv.addClass("");
       myDiv_2.addClass("wow fadeInLeft");
     } else {
-      $(".navbar").removeClass("navbar-scrolled navbarb-nav");
+      $(".navbar").removeClass("navbar-scrolled navbarb-nav p-2");
     }
   });
 });
