@@ -7,6 +7,14 @@ body {
   font-family: "Hedvig", "Letters", "Serrif", serif !important;
   color: white;
   background-color: #212529;
+  overflow-x: hidden;
+}
+ul li {
+  list-style: none;
+}
+ul li span {
+  font-size: 10px;
+  color: #429321;
 }
 .wow {
   visibility: hidden;
@@ -67,6 +75,7 @@ body {
   background-color: #000000;
   border-bottom: 2px solid #0b52d7;
   // background: transparent;
+  height: 3.6rem;
 }
 .navbarb-nav {
   padding: 20px;
