@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script
       src="https://kit.fontawesome.com/b54795a7d1.js"
       crossorigin="anonymous"
@@ -28,43 +29,14 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="./libs/wow/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="home" class="d-none d-lg-block overflow-hidden">
-      <div class="row bg_color">
-        <div class="col-lg-4 text-center py-3">
-          <div class="d-inline-flex align-items-center">
-            <i class="fa fa-map-marker fs-1 text-primary me-3"></i>
-            <div class="text-start">
-              <h6 class="text-uppercase fw-bold">Location</h6>
-              <span>Ethiopia, Addis Ababa, saris</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center border-start border-end py-3">
-          <div class="d-inline-flex align-items-center">
-            <i
-              class="fa-solid fa-envelope-open-text fs-1 text-primary me-3"
-            ></i>
-            <div class="text-start">
-              <h6 class="text-uppercase fw-bold">Email Me</h6>
-              <a href="mailto:eyuelfrew430@gmail.com">eyuelfrew430@gmail.com</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center py-3">
-          <div class="d-inline-flex align-items-center">
-            <i class="fa fa-phone fs-1 text-primary me-3"></i>
-            <div class="text-start">
-              <h6 class="text-uppercase fw-bold">Call Me</h6>
-              <span>+251904166515</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+    <nav
+      class="navbar navbar-expand-lg sticky-top px-sm-1 py-2 justify-content-between"
+      id="navbar"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Eyuel <span>&lt;/&gt;</span> Frew </a>
         <button
@@ -142,20 +114,20 @@
 
     <!-- section about starts -->
     <section id="about" class="container align-items-center">
-      <div class="row"></div>
+      <!-- <div class="row"></div> -->
       <div class="heading mb-5">
-        <h1><span class="text-primary">A</span>bout Me</h1>
+        <h1><span class="text-primary cardd-text">A</span>bout Me</h1>
       </div>
       <div class="row mt-3">
         <div class="col-sm-12 col-lg-5" id="aboutme">
           <img
             src="./assets/images/pexels-chloe-1043474.jpg"
-            class="img-fluid w-100 wow fadeInLeft"
+            class="img-fluid w-100 cardd-box"
             alt=""
           />
         </div>
-        <div class="col-sm-12 col-lg-7 wow fadeInRight" id="aboutME">
-          <p class="fs-4">
+        <div class="col-sm-12 col-lg-7" id="aboutME">
+          <p class="fs-4 cardd-text">
             Hello<img
               width="48"
               height="48"
@@ -184,15 +156,18 @@
           </div>
           <div class="tab-contents" id="exp">
             <ul>
-              <li><span>xxxxxxxxxx</span><br />Designe Web apps</li>
-              <li><span>zzzzzzzzzz</span><br />Designe Web apps</li>
-              <li><span>yyyyyyy</span><br />Designe Web apps</li>
+              <li>
+                <span>as full-stack developer</span><br />intern-programm in
+                minstry of education
+              </li>
+              <li><span>as back-end</span><br />in addis media newtwork</li>
             </ul>
           </div>
           <div class="tab-contents" id="edu">
             <ul>
               <li>
                 <span>BSc</span><br />Bsc in electrical and computer engineering
+                from dire dawa university
               </li>
             </ul>
           </div>
@@ -386,7 +361,7 @@
     <!-- section service ends -->
 
     <a href="#" class="back-to-top mb-2"><i class="fa fa-chevron-up"></i></a>
-    <script src="./libs/wow/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="./index.js"></script>
     <script>
       wow = new WOW({
@@ -400,18 +375,4 @@
       wow.init();
     </script>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-  <script>
-    var typed = new Typed(".typing-text", {
-      strings: [
-        " full-stack developer",
-        "front-end developer",
-        "back-end developer",
-        "web designer",
-      ],
-      typeSpeed: 120,
-      loop: true,
-    });
-  </script>
 </html>

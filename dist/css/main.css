@@ -16,7 +16,7 @@ ul li {
 }
 
 ul li span {
-  font-size: 10px;
+  font-size: 15px;
   color: #429321;
 }
 
@@ -30,7 +30,7 @@ ul li span {
 }
 
 .navbar {
-  background: #201f1f;
+  background-color: #212529;
   transition: background-color, padding 0.4s ease;
 }
 

@@ -1,6 +1,35 @@
 $(document).ready(function () {
   ("use strict");
+  window.sr = ScrollReveal();
 
+  sr.reveal(
+    ".cardd-box",
+    {
+      duration: 600,
+      distance: "20px",
+      easing: "ease-out",
+      origin: "bottom",
+      reset: true,
+      scale: 1,
+      viewFactor: 0,
+      afterReveal: revealChildren,
+    },
+    150
+  );
+
+  var revealChildren = sr.reveal(
+    ".cardd-title, .cardd-text",
+    {
+      duration: 500,
+      scale: 1,
+      distance: "20px",
+      origin: "bottom",
+      reset: true,
+      easing: "ease-out",
+      viewFactor: 1,
+    },
+    75
+  );
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $(".back-to-top").fadeIn("slow");
@@ -37,7 +66,6 @@ $(document).ready(function () {
       var myDiv = $("#aboutME");
       var myDiv_2 = $("#aboutme");
       myDiv.addClass("");
-      myDiv_2.addClass("wow fadeInLeft");
     } else {
       $(".navbar").removeClass("navbar-scrolled navbarb-nav p-2");
     }
