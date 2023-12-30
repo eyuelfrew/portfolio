@@ -1,35 +1,51 @@
 $(document).ready(function () {
   ("use strict");
-  // window.sr = ScrollReveal();
+  var scrollLink = $(".page-scroll");
+  // Active link switching
+  $(window).scroll(function () {
+    var scrollbarLocation = $(this).scrollTop();
 
-  // sr.reveal(
-  //   ".cardd-box",
-  //   {
-  //     duration: 600,
-  //     distance: "10px",
-  //     easing: "ease-out",
-  //     origin: "bottom",
-  //     reset: true,
-  //     scale: 2,
-  //     viewFactor: 0,
-  //     afterReveal: revealChildren,
-  //   },
-  //   150
-  // );
+    scrollLink.each(function () {
+      var sectionOffset = $(this.hash).offset().top - 100;
 
-  // var revealChildren = sr.reveal(
-  //   ".cardd-title, .cardd-text",
-  //   {
-  //     duration: 500,
-  //     scale: 1,
-  //     distance: "10px",
-  //     origin: "bottom",
-  //     reset: true,
-  //     easing: "ease-out",
-  //     viewFactor: 1,
-  //   },
-  //   75
-  // );
+      if (sectionOffset <= scrollbarLocation) {
+        // $(this).parent().addClass("active");
+        // $(this).parent().siblings().removeClass("active");
+        $(".navbar-nav .nav-link").removeClass("active");
+        $(this).addClass("active");
+      }
+    });
+  });
+  window.sr = ScrollReveal();
+
+  sr.reveal(
+    ".cardd-box",
+    {
+      duration: 600,
+      distance: "10px",
+      easing: "ease-out",
+      origin: "top",
+      reset: true,
+      scale: 2,
+      viewFactor: 0,
+      // afterReveal: revealChildren,
+    },
+    150
+  );
+
+  sr.reveal(
+    ".cardd-title, .cardd-text",
+    {
+      duration: 500,
+      scale: 4,
+      distance: "10px",
+      origin: "top",
+      reset: true,
+      easing: "ease-out",
+      viewFactor: 5,
+    },
+    75
+  );
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $(".back-to-top").fadeIn("slow");
@@ -37,21 +53,6 @@ $(document).ready(function () {
       $(".back-to-top").fadeOut("slow");
     }
   });
-  // var scrollLink = $(".page-scroll");
-
-  // // Active link switching
-  // $(window).scroll(function () {
-  //   var scrollbarLocation = $(this).scrollTop();
-
-  //   scrollLink.each(function () {
-  //     var sectionOffset = $($(this).attr("href")).offset().top - 73;
-
-  //     if (sectionOffset <= scrollbarLocation) {
-  //       $(this).parent().addClass("active");
-  //       $(this).parent().siblings().removeClass("active");
-  //     }
-  //   });
-  // });
 
   $(".back-to-top").click(function () {
     $("html, body").animate(
@@ -65,23 +66,17 @@ $(document).ready(function () {
     return false;
   });
 
-  //hideing the nav links when thye are clicked and link indicator
-  // $(".navbar-nav .nav-link").click(function () {
-  //   $(".navbar-collapse").collapse("hide");
-  // });
-  // $(".navbar-nav .nav-link").click(function () {
-  // $(".navbar-nav .nav-link").removeClass("active");
-  // $(this).addClass("active");
-  // });
+  // hideing the nav links when thye are clicked and link indicator
 
   // chage nav bar color when scrooled
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0.1) {
-      $(".navbar").addClass("navbar-scrolled navbarb-nav ");
+      $("#navbar").addClass("navbar-scrolled navbarb-nav ");
       var myDiv = $("#aboutME");
+      console.log("test worked");
       myDiv.addClass("");
     } else {
-      $(".navbar").removeClass("navbar-scrolled navbarb-nav p-2");
+      $("#navbar").removeClass("navbar-scrolled navbarb-nav p-2");
     }
   });
 });
@@ -106,3 +101,11 @@ const opentab = (tab_name) => {
   event.currentTarget.classList.add("active-link");
   document.getElementById(tab_name).classList.add("active-tab");
 };
+var typed = new Typed(".typing-text", {
+  strings: ["Full-Stack Developer", "Web Designer"],
+  typeSpeed: 100,
+  smartBackspace: true,
+  loop: true,
+  backDelay: 700,
+  backSpeed: 100,
+});
