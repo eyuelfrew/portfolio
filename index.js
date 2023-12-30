@@ -1,8 +1,7 @@
 $(document).ready(function () {
   ("use strict");
-  window.sr = ScrollReveal();
   $(window).on("load", function () {
-    $(".preloader").fadeOut("slow");
+    $(".preloader").delay(500).fadeOut("slow");
   });
   sr.reveal(
     ".cardd-box",
