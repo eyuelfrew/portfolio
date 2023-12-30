@@ -2,160 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <title>Your Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Page Title</title>
+    <style>
+      /* Add your preloader styles here */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top: 4px solid #3498db;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="container mt-5">
-      <section id="skills">
-        <h2 class="mb-4">Skills</h2>
-
-        <!-- Programming Languages -->
-        <div class="mb-4">
-          <h4>Programming Languages</h4>
-          <ul>
-            <li>
-              <strong>JavaScript:</strong> Proficient in both frontend (React)
-              and backend (Node.js) development.
-            </li>
-            <li>
-              <strong>Python:</strong> Experience in data analysis, scripting,
-              and Django framework.
-            </li>
-            <li>
-              <strong>Java:</strong> Strong foundation in object-oriented
-              programming.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Web Development -->
-        <div class="mb-4">
-          <h4>Web Development</h4>
-          <ul>
-            <li>
-              <strong>HTML5 & CSS3:</strong> Expertise in building responsive
-              and visually appealing web pages.
-            </li>
-            <li>
-              <strong>RESTful APIs:</strong> Designing and consuming APIs for
-              seamless data integration.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-
-        <!-- Database Management -->
-        <div class="mb-4">
-          <h4>Database Management</h4>
-          <ul>
-            <li>
-              <strong>SQL:</strong> Skilled in writing complex queries and
-              managing relational databases.
-            </li>
-            <li>
-              <strong>MongoDB:</strong> Experience in NoSQL database design and
-              implementation.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-
-        <!-- Frameworks & Libraries -->
-        <div class="mb-4">
-          <h4>Frameworks & Libraries</h4>
-          <ul>
-            <li>
-              <strong>React.js:</strong> Building interactive and dynamic user
-              interfaces.
-            </li>
-            <li>
-              <strong>Express.js:</strong> Developing scalable and efficient
-              server-side applications.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-
-        <!-- Tools -->
-        <div class="mb-4">
-          <h4>Tools</h4>
-          <ul>
-            <li>
-              <strong>Git/GitHub:</strong> Version control and collaborative
-              coding.
-            </li>
-            <li>
-              <strong>VS Code:</strong> Preferred code editor for its efficiency
-              and extensibility.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-
-        <!-- Problem Solving -->
-        <div class="mb-4">
-          <h4>Problem Solving</h4>
-          <ul>
-            <li>
-              <strong>Algorithmic Thinking:</strong> Strong problem-solving
-              skills with a focus on efficiency.
-            </li>
-            <li>
-              <strong>Debugging:</strong> Proficient in identifying and
-              resolving complex issues.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-
-        <!-- Soft Skills -->
-        <div class="mb-4">
-          <h4>Soft Skills</h4>
-          <ul>
-            <li>
-              <strong>Communication:</strong> Effective communication and
-              collaboration within cross-functional teams.
-            </li>
-            <li>
-              <strong>Adaptability:</strong> Quick learner, adaptable to new
-              technologies and methodologies.
-            </li>
-            <li>
-              <strong>Time Management:</strong> Efficiently managing tasks and
-              meeting deadlines.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-
-        <!-- Additional -->
-        <div class="mb-4">
-          <h4>Additional</h4>
-          <ul>
-            <li>
-              <strong>UI/UX Design:</strong> Basic understanding of user
-              experience principles.
-            </li>
-            <li>
-              <strong>Agile Methodology:</strong> Experience working in Agile
-              development environments.
-            </li>
-            <!-- Add more as needed -->
-          </ul>
-        </div>
-      </section>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Your page content goes here -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Hide the preloader when the page is fully loaded
+        $(window).on("load", function () {
+          $("#preloader").fadeOut("slow");
+        });
+      });
+    </script>
   </body>
 </html>
