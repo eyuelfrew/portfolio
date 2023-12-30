@@ -1,6 +1,6 @@
 $(document).ready(function () {
   ("use strict");
-  $(window).on("load", function () {
+  $(window).on("load", function (event) {
     $(".preloader").delay(500).fadeOut("slow");
   });
   sr.reveal(
@@ -81,6 +81,15 @@ window.onload = function () {
 /* 
   Tab contenet manager
 */
+wow = new WOW({
+  boxClass: "wow",
+  animateClass: "animated",
+  offset: 160,
+  mobile: true,
+  live: true,
+});
+
+wow.init();
 var tablinks = document.getElementsByClassName("tab-links");
 var tabContents = document.getElementsByClassName("tab-contents");
 const opentab = (tab_name) => {
