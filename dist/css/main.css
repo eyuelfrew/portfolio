@@ -11,6 +11,14 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 ul li {
   list-style: none;
 }
@@ -261,54 +269,6 @@ section .heading::before {
 /*
   section skills
 */
-.gr-1 {
-  background: linear-gradient(170deg, #01e4f8 0%, #1d3ede 100%);
-}
-
-.gr-2 {
-  background: linear-gradient(170deg, #b4ec51 0%, #429321 100%);
-}
-
-.gr-3 {
-  background: linear-gradient(170deg, #c86dd7 0%, #3023ae 100%);
-}
-
-* {
-  transition: 0.5s;
-}
-
-.h-100 {
-  height: 100vh !important;
-}
-
-.align-middle {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.column {
-  margin-top: 3rem;
-  padding-left: 3rem;
-}
-.column:hover {
-  padding-left: 0;
-}
-.column:hover .card .txt {
-  margin-left: 1rem;
-}
-.column:hover .card .txt h1,
-.column:hover .card .txt p {
-  color: rgb(255, 255, 255);
-  opacity: 1;
-}
-.column:hover a {
-  color: rgb(255, 255, 255);
-}
-.column:hover a:after {
-  width: 10%;
-}
-
 .card {
   min-height: 170px;
   margin: 0;

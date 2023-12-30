@@ -27,12 +27,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
     <script src="./libs/wow/wow.min.js"></script>
   </head>
   <body>
@@ -74,22 +69,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link page-scroll active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link page-scroll" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skill">Skill's</a>
+              <a class="nav-link page-scroll" href="#skill">Skill</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
+              <a class="nav-link page-scroll" href="#">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link page-scroll" href="#">Contact</a>
             </li>
           </ul>
         </div>
@@ -98,7 +90,7 @@
 
     <!-- section home starts here -->
 
-    <div class="container-fluid">
+    <div id="home" class="container-fluid">
       <div class="row bg-dark">
         <div class="row h-100 align-items-center justify-content-center">
           <div class="col-sm-12 col-lg-6">
@@ -141,7 +133,7 @@
         <div class="col-sm-12 col-lg-5" id="aboutme">
           <img
             src="./assets/images/pexels-chloe-1043474.jpg"
-            class="img-fluid w-100 cardd-box"
+            class="img-fluid w-100"
             alt=""
           />
         </div>
@@ -196,8 +188,8 @@
     <!-- section about ends -->
 
     <!-- section skills starts here -->
-    <section id="skill" class="container">
-      <div class="row"></div>
+    <section id="skill" class="container cardd-box">
+      <!-- <div class="row"></div> -->
       <div class="heading mb-5">
         <h1><span class="text-primary">S</span>kills</h1>
       </div>
@@ -380,12 +372,47 @@
     <!-- section service ends -->
 
     <a href="#" class="back-to-top mb-2"><i class="fa fa-chevron-up"></i></a>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./libs/vendor/scrolling-nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="./index.js"></script>
+
     <script>
       $(window).on("load", function () {
         $(".preloader").delay(2000).fadeOut("slow");
+        // $("#overlayer").delay(2000).fadeOut("slow");
       });
+      var scrollLink = $(".page-scroll");
+      // Active link switching
+      $(window).scroll(function () {
+        var scrollbarLocation = $(this).scrollTop();
+        var headerHeight = $("nav").height();
+
+        scrollLink.each(function () {
+          var sectionOffset = $(this.hash).offset().top - 100;
+
+          if (sectionOffset <= scrollbarLocation) {
+            // $(this).parent().addClass("active");
+            // $(this).parent().siblings().removeClass("active");
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(this).addClass("active");
+          }
+        });
+      });
+      wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animated",
+        offset: 160,
+        mobile: true,
+        live: true,
+      });
+
+      wow.init();
     </script>
-    <script src="./index.js"></script>
   </body>
 </html>
