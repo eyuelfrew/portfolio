@@ -4,21 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eyuel Frew</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/main.css" />
 
-    <link rel="stylesheet" href="./libs/animate/animate.min.css" />
+    <link rel="stylesheet" href="" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <script src="./libs/wow/wow.min.js"></script>
   </head>
   <body>
     <div class="navbar navbar-expand-lg bg-light navbar-light">
@@ -39,22 +31,10 @@
           <div class="navbar-nav ms-auto">
             <a href="#home" class="nav-item nav-link active">Home</a>
             <a href="#about" class="nav-item nav-link">About</a>
-            <a href="#service" class="nav-item nav-link">Service</a>
             <a href="#skills" class="nav-item nav-link">Skills</a>
+            <a href="#service" class="nav-item nav-link">Service</a>
             <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-            <a href="#price" class="nav-item nav-link">Price</a>
-            <a href="#review" class="nav-item nav-link">Review</a>
-            <a href="#team" class="nav-item nav-link">Team</a>
-            <a href="#blog" class="nav-item nav-link">Blog</a>
             <a href="#contact" class="nav-item nav-link">Contact</a>
-            <div class="ml-lg-4">
-              <div
-                class="color-mode d-lg-flex justify-content-center align-items-center"
-              >
-                <i class="color-mode-icon"></i>
-                Color mode
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -63,42 +43,46 @@
     <!-- section home starts here -->
 
     <section id="home" class="container-fluid">
-      <div class="row bg-dark">
+      <div class="row">
         <div class="row vh-100 align-items-center justify-content-center">
           <div
             class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center mt-md-5"
           >
-            <div class="vw-100">
-              <h2 class="text-start text-white cardd-text fs-1">
-                Hello there, i'm
-              </h2>
+            <div id="why" class="vw-100 mx-lg-4">
+              <h2 class="text-start cardd-text fs-1">Hello there, i'm</h2>
               <span class="my-name fs-1"
                 ><span class="text-primary cardd-text">E</span>yuel
                 <span class="text-primary cardd-text">F</span>rew</span
               >
               <div class="w-100">
-                <h1 class="text-start text-white">
+                <h1 class="text-start">
                   i'm a <span class="typing-text text-primary"></span>
                 </h1>
               </div>
-              <div class="btns d-flex mt-5 mx-3 justify-content-evenly">
-                <button class="btn float-start text-white">
+              <div class="my_buttons d-flex mt-5 mx-3 justify-content-evenly">
+                <button
+                  class="d-flex align-items-center justify-content-center fw-bolder"
+                >
                   Download CV
-                  <i class="fa fa-download"></i>
+                  <i
+                    class="fa fa-download text-success fs-3 text-danger mx-1"
+                  ></i>
                 </button>
-                <button class="btn">
-                  <a href="">Contact Me</a>
-                  <i class="fa fa-phone"></i>
+                <button
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <a href="" class="text-decoration-none text-white fw-bolder"
+                    >Contact Me</a
+                  >
+                  <i class="fa fa-phone fs-3 text-danger mx-1"></i>
                 </button>
               </div>
             </div>
           </div>
-          <div
-            class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center"
-          >
+          <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-end">
             <img
-              src="./assets/images/21864184_6502421.svg"
-              class="img-fluid p-3 w-75 text-center me-sm-5 wow fadeInUp mt-lg-5"
+              id="image_one"
+              class="img-fluid p-3 w-75 text-center me-sm-5 mt-lg-5 animated"
             />
           </div>
         </div>
@@ -113,11 +97,7 @@
       </div>
       <div class="row mt-3">
         <div class="col-sm-12 col-md-6 col-lg-5" id="aboutme">
-          <img
-            src="./assets/images/pexels-chloe-1043474.jpg"
-            class="img-fluid w-100"
-            alt=""
-          />
+          <img id="image_two" class="img-fluid w-100" alt="" />
         </div>
         <div class="col-sm-12 col-md-6 col-lg-7" id="aboutME">
           <p class="fs-4 cardd-text">
@@ -135,19 +115,17 @@
             here to help!
           </p>
           <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">
-              Skills
-            </p>
-            <p class="tab-links" onclick="opentab('exp')">Expriance</p>
-            <p class="tab-links" onclick="opentab('edu')">Education</p>
+            <p class="tab-links active-link" data-tab="tab1">Skills</p>
+            <p class="tab-links" data-tab="tab2">Expriance</p>
+            <p class="tab-links" data-tab="tab3">Education</p>
           </div>
-          <div class="tab-contents active-tab" id="skills">
+          <div class="tab-contents active-tab" id="tab1">
             <ul>
               <li><span>UI/UX</span><br />developing user interface</li>
               <li><span>Server-Side</span><br />develop server-side apps</li>
             </ul>
           </div>
-          <div class="tab-contents" id="exp">
+          <div class="tab-contents" id="tab2">
             <ul>
               <li>
                 <span>as full-stack developer</span><br />intern-programm in
@@ -156,7 +134,7 @@
               <li><span>as back-end</span><br />in addis media newtwork</li>
             </ul>
           </div>
-          <div class="tab-contents" id="edu">
+          <div class="tab-contents" id="tab3">
             <ul>
               <li>
                 <span>BSc</span><br />Bsc in electrical and computer engineering
@@ -189,7 +167,7 @@
     <!-- section skills ends here -->
 
     <!-- section service starts -->
-    <section id="portfolio" class="container-fluid vh-100 bg-primary">
+    <section id="service" class="container-fluid vh-100 bg-primary">
       <div class="card h-100"></div>
     </section>
     <section id="contact" class="container-fluid vh-100 bg-primary">
@@ -221,7 +199,7 @@
     <script src="./libs/vendor/scrolling-nav.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="./index.js"></script>
+    <script type="module" src="main.js"></script>
 
     <script>
       $(window).on("load", function () {
@@ -229,15 +207,15 @@
         // $("#overlayer").delay(2000).fadeOut("slow");
       });
 
-      wow = new WOW({
-        boxClass: "wow",
-        animateClass: "animated",
-        offset: 160,
-        mobile: true,
-        live: true,
-      });
+      // wow = new WOW({
+      //   boxClass: "wow",
+      //   animateClass: "animated",
+      //   offset: 160,
+      //   mobile: true,
+      //   live: true,
+      // });
 
-      wow.init();
+      // wow.init();
     </script>
   </body>
 </html>

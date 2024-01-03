@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Oswald:wght@200;300;400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@400;500;600&family=Smooch&family=Urbanist:ital,wght@0,300;1,200;1,300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Hedvig", "Letters", "Serrif", serif !important;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.logo {
+  font-family: "Hedvig", "Letters", "Serif";
+  color: rgb(14, 0, 212);
+}
+/*
+        Back to top button
+*/
+.back-to-top {
+  border-radius: 100%;
+  position: fixed;
+  display: none;
+  background: #d72d0b;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 22px;
+  right: 10px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 9;
+}
+
+.back-to-top:hover {
+  color: #ffffff;
+  background: #121518;
+}
+
+.back-to-top i {
+  padding-top: 10px;
+}
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+  position: relative;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.navbar.nav-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand {
+  margin: 0;
+  font-size: 45px;
+  line-height: 0px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.navbar .navbar-brand img {
+  max-width: 100%;
+  max-height: 40px;
+}
+
+.navbar .dropdown-menu {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    padding: 30px 60px;
+    background: transparent !important;
+    border-bottom: 1px dashed rgba(256, 256, 256, 0.2);
+    z-index: 9;
+  }
+
+  .navbar.nav-sticky {
+    padding: 10px 60px;
+    background: #ffffff !important;
+  }
+
+  .navbar .navbar-brand {
+    color: #000000;
+  }
+
+  .navbar.nav-sticky .navbar-brand {
+    color: black;
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-nav .nav-link:focus {
+    padding: 10px 10px 8px 10px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .navbar-light.nav-sticky .navbar-nav .nav-link,
+  .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
+    color: #414141;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #0800ff;
+  }
+
+  .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+  .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+    color: #1600dd;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 15px;
+    background: #ffffff !important;
+  }
+
+  .navbar .navbar-brand {
+    color: #ef233c;
+  }
+
+  .navbar .navbar-nav {
+    margin-top: 15px;
+  }
+
+  .navbar a.nav-link {
+    padding: 5px;
+  }
+
+  .navbar .dropdown-menu {
+    box-shadow: none;
+  }
+}
+
+/*======================
+=======Home Page=======
+========================*/
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.my_buttons {
+  button {
+    width: 10em;
+    height: 3em;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #050088, -6px -6px 12px #122394;
+  }
+
+  button::before {
+    content: "";
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #2d0fd8 0%, #47acf9 100%);
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+
+  button:hover::before {
+    width: 10em;
+  }
+}
+
+/*====================================
+=======Color mode changer=============
+=====================================*/
+.dark-mode {
+  background: #1f1f1f;
+  .navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    &:hover {
+      color: #ffc200;
+    }
+  }
+  .navbar {
+    &[class*="headroom--not-top"] {
+      background: #1f1f1f;
+      border-bottom: 1px solid #1f1f1f;
+    }
+  }
+  .small-text {
+    background: #0d0c15;
+    color: black;
+  }
+  .color-mode {
+    color: white;
+  }
+}
+
+/* ============================
+========== About Section =====
+ =============================*/
+section .heading {
+  width: 93%;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  margin-top: 5rem;
+  // margin-bottom: 10rem;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 6px;
+    background-color: blue;
+    border-radius: 50px;
+  }
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 4 0px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-style: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #ff004f;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/*
+  section skills
+*/
+.card {
+  min-height: 170px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 0.05rem;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+  .txt {
+    margin-left: -3rem;
+    z-index: 1;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 0.7rem;
+      font-family: "Open Sans", sans-serif;
+      letter-spacing: 0rem;
+      margin-top: 33px;
+      opacity: 0;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  a {
+    z-index: 3;
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 1rem;
+    position: relative;
+    bottom: -0.5rem;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0.5em;
+      width: 0;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 1);
+      transition: 0.5s;
+    }
+  }
+  .ico-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  i {
+    position: relative;
+    right: -50%;
+    top: 60%;
+    font-size: 12rem;
+    line-height: 0;
+    opacity: 0.2;
+    color: rgba(255, 255, 255, 1);
+    z-index: 0;
+  }
+}
+// preloader css
