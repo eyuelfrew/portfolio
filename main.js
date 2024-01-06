@@ -5,9 +5,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "/src/assets/css/main.css";
 import Img from "/images/homepage.png";
 import my_photo from "/images/eyu.jpg";
-
+import test_pic_1 from "/images/test_photo_1.png";
 $(document).ready(function () {
   ("use strict");
+  // Smooth scrolling when a navigation link is clicked
+  $('a[href^="#"]').on("click", function (event) {
+    event.preventDefault();
+    var target = $(this.getAttribute("href"));
+    if (target.length) {
+      $("html, body").stop().animate(
+        {
+          scrollTop: target.offset().top,
+        },
+        1000
+      ); // Adjust the duration (in milliseconds) for the scrolling animation
+    }
+  });
   /*========================
   =========pre-loader element====
   ================*/
@@ -20,6 +33,7 @@ $(document).ready(function () {
   ================*/
   $("#home_image").attr("src", Img);
   $("#image_two").attr("src", my_photo);
+  $("#devOps").attr("src", test_pic_1);
   /*========
   ========Stick Navigation to the top when scrooled
   ========*/

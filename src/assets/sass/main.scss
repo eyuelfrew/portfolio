@@ -13,6 +13,9 @@ body {
   font-family: "Hedvig", "Letters", "Serif";
   color: rgb(14, 0, 212);
 }
+canvas {
+  width: 300px;
+}
 /**********************************/
 /*********** Back To Top Button **********/
 /**********************************/
@@ -85,7 +88,6 @@ body {
     width: 100%;
     padding: 30px 60px;
     background: transparent !important;
-    border-bottom: 1px dashed rgba(256, 256, 256, 0.2);
     z-index: 9;
   }
   .navbar.nav-sticky {
