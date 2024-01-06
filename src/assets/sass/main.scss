@@ -88,12 +88,9 @@ body {
     border-bottom: 1px dashed rgba(256, 256, 256, 0.2);
     z-index: 9;
   }
-
   .navbar.nav-sticky {
     padding: 0px 60px;
     color: white;
-
-    // background: #ffffff !important;
     background: rgb(2, 0, 36) !important;
     background: linear-gradient(
       90deg,
@@ -101,15 +98,12 @@ body {
       rgba(0, 0, 18, 1) 99%
     ) !important;
   }
-
   .navbar .navbar-brand {
     color: #ffffff;
   }
-
   .navbar.nav-sticky .navbar-brand {
     color: #ef233c;
   }
-
   .navbar-light .navbar-nav .nav-link,
   .navbar-light .navbar-nav .nav-link:focus {
     padding: 10px 10px 8px 10px;
@@ -117,48 +111,20 @@ body {
     font-size: 15px;
     font-weight: 500;
   }
-
   .navbar-light.nav-sticky .navbar-nav .nav-link,
   .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
     color: #fff;
   }
-
   .navbar-light .navbar-nav .nav-link:hover,
   .navbar-light .navbar-nav .nav-link.active {
     color: rgb(0, 153, 235);
   }
-
   .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
   .navbar-light.nav-sticky .navbar-nav .nav-link.active {
     color: rgb(0, 153, 235);
   }
 }
 
-@media (max-width: 991.98px) {
-  .navbar {
-    padding: 15px;
-    background: #ffffff !important;
-  }
-
-  .navbar .navbar-brand {
-    color: #ef233c;
-  }
-
-  .navbar .navbar-nav {
-    margin-top: 15px;
-  }
-
-  .navbar a.nav-link {
-    padding: 5px;
-  }
-
-  .navbar .dropdown-menu {
-    box-shadow: none;
-  }
-  #home {
-    background-image: url("./../images/home_iamge.png");
-  }
-}
 /*=========
 ====contact me button hover effect
 ==========*/
@@ -353,7 +319,12 @@ p {
 #about {
   .row {
     .circle {
-      background: #000;
+      background: rgb(2, 0, 36) !important;
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 74%,
+        rgba(0, 0, 18, 1) 99%
+      ) !important;
       width: 390px;
       height: 390px;
       margin: auto;
@@ -406,9 +377,7 @@ p {
           width: 39px;
           height: 39px;
           background: #075cdb;
-          -webkit-box-shadow: 0px 0px 250px 100px rgba(39, 6, 186, 0.83);
-          -moz-box-shadow: 0px 0px 250px 100px rgba(138, 19, 59, 0.83);
-          box-shadow: 0px 0px 250px 100px rgba(51, 97, 181, 0.83);
+          animation: up-down 2s ease-in-out infinite alternate-reverse both;
           border-radius: 50%;
         }
         &::after {
@@ -523,6 +492,23 @@ p {
   transition: width 1.5s ease-in-out;
 }
 @media (max-width: 991px) {
+  .navbar {
+    padding: 15px;
+    background: #ffffff !important;
+  }
+
+  .navbar .navbar-brand {
+    color: #ef233c;
+  }
+
+  .navbar .navbar-nav {
+    margin-top: 15px;
+  }
+
+  .navbar a.nav-link {
+    padding: 5px;
+  }
+
   #about {
     .row {
       .circle {
@@ -596,9 +582,6 @@ p {
             z-index: 20;
           }
           img {
-            -webkit-box-shadow: 0px 0px 250px 100px rgba(19, 35, 138, 0.83);
-            -moz-box-shadow: 0px 0px 250px 100px rgba(19, 35, 138, 0.83);
-            box-shadow: 0px 0px 250px 100px rgba(19, 35, 138, 0.83);
             width: 100%;
             z-index: 1;
           }

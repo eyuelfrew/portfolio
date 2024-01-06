@@ -121,27 +121,6 @@ body {
     color: rgb(0, 153, 235);
   }
 }
-@media (max-width: 991.98px) {
-  .navbar {
-    padding: 15px;
-    background: #ffffff !important;
-  }
-  .navbar .navbar-brand {
-    color: #ef233c;
-  }
-  .navbar .navbar-nav {
-    margin-top: 15px;
-  }
-  .navbar a.nav-link {
-    padding: 5px;
-  }
-  .navbar .dropdown-menu {
-    box-shadow: none;
-  }
-  #home {
-    background-image: url("./../images/home_iamge.png");
-  }
-}
 /*=========
 ====contact me button hover effect
 ==========*/
@@ -328,7 +307,8 @@ p {
 }
 
 #about .row .circle {
-  background: #000;
+  background: rgb(2, 0, 36) !important;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 74%, rgb(0, 0, 18) 99%) !important;
   width: 390px;
   height: 390px;
   margin: auto;
@@ -383,9 +363,7 @@ p {
   width: 39px;
   height: 39px;
   background: #075cdb;
-  -webkit-box-shadow: 0px 0px 250px 100px rgba(39, 6, 186, 0.83);
-  -moz-box-shadow: 0px 0px 250px 100px rgba(138, 19, 59, 0.83);
-  box-shadow: 0px 0px 250px 100px rgba(51, 97, 181, 0.83);
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
   border-radius: 50%;
 }
 #about .row .circle .img-box::after {
@@ -494,6 +472,19 @@ p {
 }
 
 @media (max-width: 991px) {
+  .navbar {
+    padding: 15px;
+    background: #ffffff !important;
+  }
+  .navbar .navbar-brand {
+    color: #ef233c;
+  }
+  .navbar .navbar-nav {
+    margin-top: 15px;
+  }
+  .navbar a.nav-link {
+    padding: 5px;
+  }
   #about .row .circle {
     background: #000;
     width: 290px;
@@ -567,9 +558,6 @@ p {
     z-index: 20;
   }
   #about .row .circle .img-box img {
-    -webkit-box-shadow: 0px 0px 250px 100px rgba(19, 35, 138, 0.83);
-    -moz-box-shadow: 0px 0px 250px 100px rgba(19, 35, 138, 0.83);
-    box-shadow: 0px 0px 250px 100px rgba(19, 35, 138, 0.83);
     width: 100%;
     z-index: 1;
   }
