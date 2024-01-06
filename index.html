@@ -13,10 +13,10 @@
     />
   </head>
   <body>
-    <div class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="navbar navbar-expand-lg bg-light navbar-light sticky-sm-top">
       <div class="container-fluid">
         <a href="index.html" class="navbar-brand"
-          ><span class="logo"><span>&lt;</span>J</span>oel&gt;</a
+          ><span class="logo"><span>&lt;</span>J/</span>oel&gt;</a
         >
         <button
           type="button"
@@ -29,12 +29,14 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="#home" class="nav-item nav-link active">Home</a>
-            <a href="#about" class="nav-item nav-link">About</a>
-            <a href="#skills" class="nav-item nav-link">Skills</a>
-            <a href="#service" class="nav-item nav-link">Service</a>
-            <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-            <a href="#contact" class="nav-item nav-link">Contact</a>
+            <a href="#home" class="nav-item nav-link active fs-3">Home</a>
+            <a href="#about" class="nav-item nav-link fs-3">About</a>
+            <a href="#skills" class="nav-item nav-link fs-3">Skills</a>
+            <a href="#service" class="nav-item nav-link fs-3">Service</a>
+            <a href="#portfolio" class="nav-item nav-link fs-3">Portfolio</a>
+            <div class="my_link">
+              <a href="#contact" class="fs-4">Contact</a>
+            </div>
           </div>
         </div>
       </div>
@@ -46,9 +48,9 @@
       <div class="row">
         <div class="row vh-100 align-items-center justify-content-center">
           <div
-            class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center mt-md-5"
+            class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center"
           >
-            <div id="why" class="vw-100 mx-lg-4">
+            <div id="why" class="vw-100 mx-lg-4 mt-5">
               <h2 class="text-start cardd-text fs-1">Hello there, i'm</h2>
               <span class="my-name fs-1"
                 ><span class="text-primary cardd-text">E</span>yuel
@@ -59,7 +61,9 @@
                   i'm a <span class="typing-text text-primary"></span>
                 </h1>
               </div>
-              <div class="my_buttons d-flex mt-5 mx-3 justify-content-evenly">
+              <div
+                class="my_buttons d-flex mt-5 justify-content-evenly justify-content-sm-center"
+              >
                 <button
                   class="d-flex align-items-center justify-content-center fw-bolder"
                 >
@@ -69,7 +73,7 @@
                   ></i>
                 </button>
                 <button
-                  class="d-flex align-items-center justify-content-center fw-bolder"
+                  class="d-flex align-items-center justify-content-center fw-bolder mx-lg-3"
                 >
                   Contact Me
                   <i class="fa fa-phone fs-3 text-danger mx-1"></i>
@@ -77,28 +81,44 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-end">
-            <!-- <img
-              id="image_one"
-              class="img-fluid p-3 w-75 text-center me-sm-5 mt-lg-5 animated"
-            /> -->
+          <div
+            class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center"
+          >
+            <div
+              class="w-75 bg-danger d-flex justify-content-center overflow-hidden position-re"
+              style="border-radius: 85% 15% 100% 0% / 49% 80% 20% 51%"
+            >
+              <img class="w-75" id="" alt="" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- section about starts -->
-    <section id="about" class="container align-items-center">
-      <!-- <div class="row"></div> -->
+    <section id="about" class="container-fluid align-items-center">
       <div class="heading mb-5">
-        <h1><span class="text-primary cardd-text">A</span>bout Me</h1>
+        <h1 class="text-white"><span class="text-primary">A</span>bout Me</h1>
       </div>
       <div class="row mt-3">
-        <div class="col-sm-12 col-md-6 col-lg-5" id="aboutme">
-          <img id="image_two" class="img-fluid w-100" alt="" />
+        <div
+          class="col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center"
+          id="aboutme"
+        >
+          <div class="circle">
+            <div class="img-box">
+              <img id="home_image" alt="" />
+            </div>
+          </div>
+          <!-- <div class="image-col col-md-4 w-100 text-center">
+            <img id="home_image" alt="Joel Frew" />
+            <button class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
+            </button>
+          </div> -->
         </div>
         <div class="col-sm-12 col-md-6 col-lg-7" id="aboutME">
-          <p class="fs-4 cardd-text">
+          <p class="fs-4 cardd-text text-white mt-sm-5">
             Hello<img
               width="48"
               height="48"
@@ -113,28 +133,37 @@
             here to help!
           </p>
           <div class="tab-titles">
-            <p class="tab-links active-link" data-tab="tab1">Skills</p>
-            <p class="tab-links" data-tab="tab2">Expriance</p>
-            <p class="tab-links" data-tab="tab3">Education</p>
+            <p class="tab-links active-link text-primary" data-tab="tab1">
+              Skills
+            </p>
+            <p class="tab-links text-primary" data-tab="tab2">Expriance</p>
+            <p class="tab-links text-primary" data-tab="tab3">Education</p>
           </div>
           <div class="tab-contents active-tab" id="tab1">
             <ul>
-              <li><span>UI/UX</span><br />developing user interface</li>
-              <li><span>Server-Side</span><br />develop server-side apps</li>
+              <li class="text-white">
+                <span>Software designe and developemnt</span
+                ><br />intern-programm in minstry of education
+              </li>
+              <li class="text-white">
+                <span>as back-end</span><br />in addis media newtwork
+              </li>
             </ul>
           </div>
           <div class="tab-contents" id="tab2">
             <ul>
-              <li>
+              <li class="text-white">
                 <span>as full-stack developer</span><br />intern-programm in
                 minstry of education
               </li>
-              <li><span>as back-end</span><br />in addis media newtwork</li>
+              <li class="text-white">
+                <span>as back-end</span><br />in addis media newtwork
+              </li>
             </ul>
           </div>
           <div class="tab-contents" id="tab3">
             <ul>
-              <li>
+              <li class="text-white">
                 <span>BSc</span><br />Bsc in electrical and computer engineering
                 from dire dawa university
               </li>
@@ -146,31 +175,220 @@
     <!-- section about ends -->
 
     <!-- section skills starts here -->
-    <section id="skills" class="container">
+    <section id="skills" class="container-fluid h-100">
       <div class="heading">
-        <h1><span class="text-primary">S</span>kills</h1>
+        <div class="position-relative">
+          <h1 class="text-white">
+            <span class="text-primary">M</span>y
+            <span class="text-primary"> S</span>kills
+          </h1>
+        </div>
       </div>
       <div
-        class="container d-flex vh-100 align-items-center justify-content-center"
+        class="skill-content d-flex align-content-center justify-content-center"
       >
-        <div class="cardd-box">
-          <div class="d-flex justify-content-evenly">
-            <div class="">
-              <h1 class="fs1">joel frew</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="single-skill-content">
+                <div class="barWrapper">
+                  <span class="progressText">Java Script</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-danger"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>90%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText">PHP</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>85%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText">python</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-primary"
+                        role="progressbar"
+                        aria-valuenow="75"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>75%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText">CSS</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>90%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText">HTML</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-secondary"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>90%</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-skill-content">
+                <div class="barWrapper">
+                  <span class="progressText">Angular JS</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        style="background-color: brown"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>90%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText">React JS</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        style="background-color: rgb(79, 15, 255)"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>85%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText">Laravel PHP</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        style="background-color: rgb(255, 13, 231)"
+                        role="progressbar"
+                        aria-valuenow="97"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>97%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+                <div class="barWrapper">
+                  <span class="progressText"> Next JS</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        style="background-color: rgb(2, 255, 40)"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>90%</h3>
+                  </div>
+                </div>
+                <div class="barWrapper">
+                  <span class="progressText"> Node JS</span>
+                  <div class="single-progress-txt">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        style="background-color: rgb(2, 255, 40)"
+                        role="progressbar"
+                        aria-valuenow="70"
+                        aria-valuemin="10"
+                        aria-valuemax="100"
+                        style=""
+                      ></div>
+                    </div>
+                    <h3>70%</h3>
+                  </div>
+                </div>
+                <!-- /.barWrapper -->
+              </div>
             </div>
           </div>
+          <!-- /.row -->
         </div>
+        <!-- /.container -->
       </div>
     </section>
     <!-- section skills ends here -->
 
     <!-- section service starts -->
-    <section id="service" class="container-fluid vh-100 bg-primary">
-      <div class="card h-100"></div>
+    <!-- <section id="service" class="container-fluid vh-100 bg-primary">
+      <div class="heading">
+        <div class="position-relative">
+          <h1 class="text-white"><span class="text-primary"> S</span>ervice</h1>
+        </div>
+      </div>
     </section>
     <section id="contact" class="container-fluid vh-100 bg-primary">
       <div class="card h-100"></div>
-    </section>
+    </section> -->
     <!-- <section id="contact" class="container-fluid vh-100 bg-primary">
       <div class="card h-100"></div>
     </section> -->
@@ -184,27 +402,18 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
+
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script
       src="https://kit.fontawesome.com/b54795a7d1.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./libs/vendor/scrolling-nav.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- <script src="./libs/vendor/scrolling-nav.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script type="module" src="main.js"></script>
 
     <script>
-      $(window).on("load", function () {
-        $(".preloader").delay(2000).fadeOut("slow");
-        // $("#overlayer").delay(2000).fadeOut("slow");
-      });
-
       // wow = new WOW({
       //   boxClass: "wow",
       //   animateClass: "animated",

@@ -13,7 +13,7 @@ $(function () {
           {
             scrollTop: target.offset().top - 70,
           },
-          500,
+          3000,
           "easeInOutExpo"
         );
         return false;

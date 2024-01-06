@@ -1,15 +1,28 @@
+import $ from "jquery";
+import "jquery.easing";
+import "jquery.appear";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "/src/assets/css/main.css";
-import "/src/libs/vendor/scrolling-nav";
-import Img from "/images/image.svg";
+import Img from "/images/homepage.png";
 import my_photo from "/images/eyu.jpg";
+
 $(document).ready(function () {
   ("use strict");
-
-  //adding images
-  $("#image_one").attr("src", Img);
+  /*========================
+  =========pre-loader element====
+  ================*/
+  $(window).on("load", function () {
+    $(".preloader").delay(2000).fadeOut("slow");
+    $("#overlayer").delay(2000).fadeOut("slow");
+  });
+  /*========================
+  =========adding images====
+  ================*/
+  $("#home_image").attr("src", Img);
   $("#image_two").attr("src", my_photo);
-  //Stick Navigation to the top when scrooled
+  /*========
+  ========Stick Navigation to the top when scrooled
+  ========*/
   $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
@@ -19,7 +32,9 @@ $(document).ready(function () {
       }
     });
   });
-  //Back to top button
+  /*===========================
+  ========Back to top button===
+  =============================*/
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $(".back-to-top").fadeIn("slow");
@@ -38,12 +53,10 @@ $(document).ready(function () {
     );
     return false;
   });
-  //Color of them changer when clicked
-  $(".color-mode").click(function () {
-    $(".color-mode-icon").toggleClass("");
-    $("body").toggleClass("dark-mode");
-  });
-  //change tab in about me page
+
+  /*===================================
+  ========Tab menu for about me page===
+  =====================================*/
   $(".tab-links").on("click", function (event) {
     var tabName = $(this).data("tab");
     console.log(tabName);
@@ -52,7 +65,9 @@ $(document).ready(function () {
     $(this).addClass("active-link");
     $("#" + tabName).addClass("active-tab");
   });
-  //navigate tab based on scrool postion
+  /*===================================================
+  ========nav tab color beased on sections or scroll===
+  =====================================================*/
   const sections = $("section[id]");
   const navHighlighter = () => {
     let scrollY = $(window).scrollTop();
@@ -60,7 +75,6 @@ $(document).ready(function () {
       const sectionHeight = $(this).outerHeight();
       const sectionTop = $(this).offset().top - 75;
       const sectionId = $(this).attr("id");
-      console.log(sectionId);
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         $(".navbar-nav a[href*=" + sectionId + "]").addClass("active");
       } else {
@@ -69,8 +83,9 @@ $(document).ready(function () {
     });
   };
   $(window).on("scroll", navHighlighter);
-
-  //initialyze auto typing contents
+  /*===================================
+  ====initialyze auto typing contents===
+  =====================================*/
   new Typed(".typing-text", {
     strings: ["Full-Stack Developer", "Web Designer"],
     typeSpeed: 100,
@@ -79,12 +94,45 @@ $(document).ready(function () {
     backDelay: 700,
     backSpeed: 100,
   });
+
+  /*==============================================
+  =====smoothe scroling when tab links cliecked===
+  ================================================*/
+  // $(".navbar-nav  a").on("click", function (event) {
+  //   if (this.hash !== "") {
+  //     event.preventDefault();
+  //     var anchor = $(this);
+  //     $("html, body")
+  //       .stop()
+  //       .animate(
+  //         {
+  //           scrollTop: $(anchor.attr("href")).offset().top - 0,
+  //         },
+  //         1200,
+  //         "easeInOutExpo"
+  //       );
+  //     $("body").scrollspy({
+  //       target: ".navbar-nav",
+  //       offset: 0,
+  //     });
+  //   }
+  // });
+  var dataToggleTooTip = $('[data-toggle="tooltip"]');
+  var progressBar = $(".progress-bar");
+  if (progressBar.length) {
+    progressBar.appear(function () {
+      progressBar.each(function () {
+        var each_bar_width = $(this).attr("aria-valuenow");
+        $(this).width(each_bar_width + "%");
+      });
+    });
+  }
 });
 
 //window scrol smooting
-window.onload = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+// window.onload = function () {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// };
