@@ -28,15 +28,18 @@ $(document).ready(function () {
     $(".preloader").delay(2000).fadeOut("slow");
     $("#overlayer").delay(2000).fadeOut("slow");
   });
+
   /*========================
   =========adding images====
   ================*/
   $("#home_image").attr("src", Img);
   $("#image_two").attr("src", my_photo);
   $("#devOps").attr("src", test_pic_1);
+
   /*========
   ========Stick Navigation to the top when scrooled
   ========*/
+
   $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
@@ -46,6 +49,7 @@ $(document).ready(function () {
       }
     });
   });
+
   /*===========================
   ========Back to top button===
   =============================*/
@@ -56,6 +60,7 @@ $(document).ready(function () {
       $(".back-to-top").fadeOut("slow");
     }
   });
+
   $(".back-to-top").click(function () {
     $("html, body").animate(
       { scrollTop: 0 },
@@ -79,6 +84,7 @@ $(document).ready(function () {
     $(this).addClass("active-link");
     $("#" + tabName).addClass("active-tab");
   });
+
   /*===================================================
   ========nav tab color beased on sections or scroll===
   =====================================================*/
@@ -97,6 +103,7 @@ $(document).ready(function () {
     });
   };
   $(window).on("scroll", navHighlighter);
+
   /*===================================
   ====initialyze auto typing contents===
   =====================================*/
@@ -109,29 +116,7 @@ $(document).ready(function () {
     backSpeed: 100,
   });
 
-  /*==============================================
-  =====smoothe scroling when tab links cliecked===
-  ================================================*/
-  // $(".navbar-nav  a").on("click", function (event) {
-  //   if (this.hash !== "") {
-  //     event.preventDefault();
-  //     var anchor = $(this);
-  //     $("html, body")
-  //       .stop()
-  //       .animate(
-  //         {
-  //           scrollTop: $(anchor.attr("href")).offset().top - 0,
-  //         },
-  //         1200,
-  //         "easeInOutExpo"
-  //       );
-  //     $("body").scrollspy({
-  //       target: ".navbar-nav",
-  //       offset: 0,
-  //     });
-  //   }
-  // });
-  var dataToggleTooTip = $('[data-toggle="tooltip"]');
+  /* Progress bar width length*/
   var progressBar = $(".progress-bar");
   if (progressBar.length) {
     progressBar.appear(function () {
@@ -143,10 +128,9 @@ $(document).ready(function () {
   }
 });
 
-//window scrol smooting
-// window.onload = function () {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth",
-//   });
-// };
+window.onload = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};

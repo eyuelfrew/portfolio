@@ -13,8 +13,16 @@ body {
   font-family: "Hedvig", "Letters", "Serif";
   color: rgb(14, 0, 212);
 }
-canvas {
-  width: 300px;
+#skills,
+#about,
+#service,
+#home {
+  background: rgb(2, 0, 36) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 74%,
+    rgba(0, 0, 18, 1) 99%
+  ) !important;
 }
 /**********************************/
 /*********** Back To Top Button **********/
@@ -258,7 +266,7 @@ canvas {
   text-align: center;
   font-size: 2rem;
   position: relative;
-  padding-top: 5rem;
+  // padding-top: 5rem;
   margin-bottom: -5rem;
   &::before {
     content: "";
@@ -424,75 +432,82 @@ p {
 /*-------------------------------------
         6.  Skills
 --------------------------------------*/
-#skills,
-#about,
-#service,
-#home {
-  background: rgb(2, 0, 36) !important;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 74%,
-    rgba(0, 0, 18, 1) 99%
-  ) !important;
-}
-#skills .container {
-  margin-top: 10rem;
-}
-.skills {
-  color: white;
-}
-.skill-content {
-  // padding: 50px 0 80px;
-}
-.single-skill-content {
-  // padding-top: 100px;
-}
-.section-heading h2 {
-  color: wheat;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #e5ebf2;
-}
-.single-progress-txt {
-  display: flex;
-  color: white;
-}
-.single-progress-txt h3 {
-  width: 10%;
-  color: #ffffff;
-  position: relative;
-  // top: 6px;
-  left: 20px;
-}
-.barWrapper {
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: black;
-  span {
+
+#skills {
+  .container {
+    margin-top: 10rem;
+  }
+  .section-heading h2 {
+    color: wheat;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e5ebf2;
+  }
+  .single-progress-txt {
+    display: flex;
     color: white;
   }
+  .single-progress-txt h3 {
+    width: 10%;
+    color: #ffffff;
+    position: relative;
+    left: 20px;
+  }
+  .barWrapper {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: black;
+    span {
+      color: white;
+    }
+  }
+  .progress {
+    border-radius: 3px;
+    overflow: visible;
+    background: #e6ecf3;
+    height: 8px;
+    margin-top: 15px;
+    width: 85%;
+    margin-bottom: 37px;
+  }
+  .progress-bar {
+    background: #b636ff;
+    border-radius: 3px;
+    -webkit-transition: width 1.5s ease-in-out;
+    -ms-transition: width 1.5s ease-in-out;
+    -moz-transition: width 1.5s ease-in-out;
+    -o-transition: width 1.5s ease-in-out;
+    transition: width 1.5s ease-in-out;
+  }
 }
-.progress {
-  border-radius: 3px;
-  overflow: visible;
-  background: #e6ecf3;
-  height: 8px;
-  margin-top: 15px;
-  width: 85%;
-  margin-bottom: 37px;
+
+/*==========================
+========Service===============
+==============================
+*/
+#service {
+  .card {
+    border-radius: 100% 0% 100% 0% / 26% 72% 28% 74%;
+    width: 22rem;
+    height: 18rem;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      -webkit-box-shadow: 0px 0px 62px 7px rgba(77, 46, 255, 1);
+      -moz-box-shadow: 0px 0px 62px 7px rgba(77, 46, 255, 1);
+      box-shadow: 0px 0px 62px 7px rgba(77, 46, 255, 1);
+    }
+  }
 }
-.progress-bar {
-  background: #b636ff;
-  border-radius: 3px;
-  -webkit-transition: width 1.5s ease-in-out;
-  -ms-transition: width 1.5s ease-in-out;
-  -moz-transition: width 1.5s ease-in-out;
-  -o-transition: width 1.5s ease-in-out;
-  transition: width 1.5s ease-in-out;
-}
+/*==========================
+========Responsive Designe==
+============================
+*/
+
 @media (max-width: 991px) {
   .navbar {
     padding: 15px;
@@ -514,7 +529,6 @@ p {
   #about {
     .row {
       .circle {
-        background: #000;
         width: 290px;
         height: 290px;
         margin: auto;

@@ -16,8 +16,12 @@ body {
   color: rgb(14, 0, 212);
 }
 
-canvas {
-  width: 300px;
+#skills,
+#about,
+#service,
+#home {
+  background: rgb(2, 0, 36) !important;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 74%, rgb(0, 0, 18) 99%) !important;
 }
 
 /**********************************/
@@ -239,7 +243,6 @@ canvas {
   text-align: center;
   font-size: 2rem;
   position: relative;
-  padding-top: 5rem;
   margin-bottom: -5rem;
 }
 .heading::before {
@@ -407,23 +410,10 @@ p {
 /*-------------------------------------
         6.  Skills
 --------------------------------------*/
-#skills,
-#about,
-#service,
-#home {
-  background: rgb(2, 0, 36) !important;
-  background: linear-gradient(90deg, rgb(2, 0, 36) 74%, rgb(0, 0, 18) 99%) !important;
-}
-
 #skills .container {
   margin-top: 10rem;
 }
-
-.skills {
-  color: white;
-}
-
-.section-heading h2 {
+#skills .section-heading h2 {
   color: wheat;
   font-size: 24px;
   font-weight: 600;
@@ -431,30 +421,26 @@ p {
   padding-bottom: 50px;
   border-bottom: 1px solid #e5ebf2;
 }
-
-.single-progress-txt {
+#skills .single-progress-txt {
   display: flex;
   color: white;
 }
-
-.single-progress-txt h3 {
+#skills .single-progress-txt h3 {
   width: 10%;
   color: #ffffff;
   position: relative;
   left: 20px;
 }
-
-.barWrapper {
+#skills .barWrapper {
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
   color: black;
 }
-.barWrapper span {
+#skills .barWrapper span {
   color: white;
 }
-
-.progress {
+#skills .progress {
   border-radius: 3px;
   overflow: visible;
   background: #e6ecf3;
@@ -463,8 +449,7 @@ p {
   width: 85%;
   margin-bottom: 37px;
 }
-
-.progress-bar {
+#skills .progress-bar {
   background: #b636ff;
   border-radius: 3px;
   -webkit-transition: width 1.5s ease-in-out;
@@ -474,6 +459,28 @@ p {
   transition: width 1.5s ease-in-out;
 }
 
+/*==========================
+========Service===============
+==============================
+*/
+#service .card {
+  border-radius: 100% 0% 100% 0%/26% 72% 28% 74%;
+  width: 22rem;
+  height: 18rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#service .card:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 62px 7px rgb(77, 46, 255);
+  -moz-box-shadow: 0px 0px 62px 7px rgb(77, 46, 255);
+  box-shadow: 0px 0px 62px 7px rgb(77, 46, 255);
+}
+
+/*==========================
+========Responsive Designe==
+============================
+*/
 @media (max-width: 991px) {
   .navbar {
     padding: 15px;
@@ -489,7 +496,6 @@ p {
     padding: 5px;
   }
   #about .row .circle {
-    background: #000;
     width: 290px;
     height: 290px;
     margin: auto;
