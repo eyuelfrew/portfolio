@@ -7,11 +7,10 @@ body {
   font-family: "Hedvig", "Letters", "Serrif", serif !important;
   color: rgb(255, 255, 255);
   overflow-x: hidden;
-  box-sizing: border-box;
   background: rgb(2, 0, 36) !important;
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 74%,
+    rgba(2, 0, 36, 1) 100%,
     rgba(0, 0, 18, 1) 99%
   ) !important;
 }
@@ -508,6 +507,7 @@ p {
   .navbar {
     padding: 15px;
     background: #ffffff !important;
+    width: 100%;
   }
 
   .navbar .navbar-brand {

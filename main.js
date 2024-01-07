@@ -9,18 +9,7 @@ import test_pic_1 from "/images/test_photo_1.png";
 $(document).ready(function () {
   ("use strict");
   // Smooth scrolling when a navigation link is clicked
-  $('a[href^="#"]').on("click", function (event) {
-    event.preventDefault();
-    var target = $(this.getAttribute("href"));
-    if (target.length) {
-      $("html, body").stop().animate(
-        {
-          scrollTop: target.offset().top,
-        },
-        1000
-      ); // Adjust the duration (in milliseconds) for the scrolling animation
-    }
-  });
+
   /*========================
   =========pre-loader element====
   ================*/
@@ -49,7 +38,18 @@ $(document).ready(function () {
       }
     });
   });
-
+  // $('a[href^="#"]').on("click", function (event) {
+  //   event.preventDefault();
+  //   var target = $(this.getAttribute("href"));
+  //   if (target.length) {
+  //     $("html, body").stop().animate(
+  //       {
+  //         scrollTop: target.offset().top,
+  //       },
+  //       1000
+  //     ); // Adjust the duration (in milliseconds) for the scrolling animation
+  //   }
+  // });
   /*===========================
   ========Back to top button===
   =============================*/
